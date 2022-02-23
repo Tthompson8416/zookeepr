@@ -4,6 +4,11 @@ const express = require('express');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+// parse incoming string or array data
+app.use(express.urlencoded({ extended: true}));
+//parse incoming JSON data
+app.use(express.json());
+
 function filterByQuery(query, animalsArray) {
     let personalityTraitsArray = [];
     // Note that we save the animalsArray as filteredResults here:
@@ -48,6 +53,14 @@ function findById(id, animalsArray) {
     return result;
   }
 
+function createNewAnimal(body, animalsArray) {
+    console.log(body);
+    // our function's main code will go here!
+
+    // return finished code to post route for response
+    return body;
+}
+
 app.get('/api/animals', (req, res) => {
     let results = animals;
     if (req.query) {
@@ -64,6 +77,13 @@ app.get('/api/animals/:id', (req, res) => {
     res.send(404);
   }
   
+});
+
+app.post('/api/animals', (req, res) => {
+    // set id based on what the next index of the array will be
+    req.body.id = animals.length.toString();
+    
+    res.json(req.body);
 });
 
 app.listen(PORT, () => {
