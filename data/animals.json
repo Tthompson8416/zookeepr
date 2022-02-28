@@ -117,42 +117,7 @@
         "hungry"
       ],
       "id": "11"
-    },
-    {
-      "name": "o",
-      "species": "lemur",
-      "diet": "omnivore",
-      "personalityTraits": [
-        "hungry"
-      ],
-      "id": "12"
-    },
-    {
-      "name": "0",
-      "species": "lemur",
-      "diet": "omnivore",
-      "personalityTraits": [
-        "hungry"
-      ],
-      "id": "13"
-    },
-    {
-      "name": "0",
-      "species": "0",
-      "diet": "omnivore",
-      "personalityTraits": [
-        "hungry"
-      ],
-      "id": "14"
-    },
-    {
-      "name": "0",
-      "species": "0",
-      "diet": "nm0",
-      "personalityTraits": [
-        "hungry"
-      ],
-      "id": "15"
     }
+ 
   ]
 }
