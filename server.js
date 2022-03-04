@@ -12,6 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 //parse incoming JSON data
 app.use(express.json());
 
+app.use(express.static('public'));
+
 function filterByQuery(query, animalsArray) {
     let personalityTraitsArray = [];
     // Note that we save the animalsArray as filteredResults here:
@@ -117,7 +119,7 @@ app.post('/api/animals', (req, res) => {
 // GET rout to display HTML page in browser
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
+    res.sendFile(path.join(__dirname, './data/public/index.html'));
 });
 
 app.listen(PORT, () => {
