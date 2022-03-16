@@ -7,6 +7,8 @@ const express = require('express');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+// middleware (.urlencoded / .json / .static)
+
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
 //parse incoming JSON data
@@ -84,6 +86,7 @@ function validateAnimal(animal) {
     }
     return true;
 }
+
 
 app.get('/api/animals', (req, res) => {
     let results = animals;
