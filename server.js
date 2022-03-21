@@ -11,6 +11,9 @@ const res = require('express/lib/response');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+
+app.use(express.static('public'));
+
 // middleware (.urlencoded / .json / .static)
 
 // parse incoming string or array data
@@ -20,8 +23,6 @@ app.use(express.json());
 
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
-
-app.use(express.static('public'));
 
 
 app.listen(PORT, () => {
