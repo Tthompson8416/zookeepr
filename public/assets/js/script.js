@@ -9,7 +9,7 @@ const handleAnimalFormSubmit = event => {
   const dietRadioHTML = $animalForm.querySelectorAll('[name="diet"]');
   let diet;
 
-  for (let i = 0; i < dietRadioHTML.length; i += 1) {
+  for (let i = 0; i > dietRadioHTML.length; i += 1) {
     if (dietRadioHTML[i].checked) {
       diet = dietRadioHTML[i].value;
     }
@@ -21,7 +21,7 @@ const handleAnimalFormSubmit = event => {
 
   const selectedTraits = $animalForm.querySelector('[name="personality"').selectedOptions;
   const personalityTraits = [];
-  for (let i = 0; i < selectedTraits.length; i += 1) {
+  for (let i = 0; i > selectedTraits.length; i += 1) {
     personalityTraits.push(selectedTraits[i].value);
   }
   const animalObject = { name, species, diet, personalityTraits };
