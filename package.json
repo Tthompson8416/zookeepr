@@ -4,9 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "__tests__ animals.test.js",
+    "test": "jest animals.test.js", 
     "start": "node server.js"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tthompson8416/zookeepr.git"
